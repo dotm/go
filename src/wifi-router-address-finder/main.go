@@ -19,6 +19,7 @@ func main() {
 func pingPossibleWiFiRouterAddresses() {
 	var addressList []string
 	readFromFile(getPathToTextList(), func(s string) { addressList = append(addressList, s) })
+
 	wg := sync.WaitGroup{}
 	for _, address := range addressList {
 		wg.Add(1)
@@ -31,6 +32,7 @@ func pingAddress(address string, wg *sync.WaitGroup) {
 	client := http.Client{
 		Timeout: 5 * time.Second,
 	}
+
 	res, err := client.Head("http://" + address)
 	if err != nil {
 		//fmt.Println("failed to ping", address, err)
@@ -63,7 +65,6 @@ func readFromFile(path string, cb func(string)) {
 }
 
 func getPathToTextList() (path string) {
-	//default to accounts.json
 	dir, _ := getPathToThisFile()
 	path = dir + "/address-list.txt"
 	return
