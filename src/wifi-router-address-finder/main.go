@@ -18,7 +18,7 @@ func main() {
 
 func pingPossibleWiFiRouterAddresses() {
 	var addressList []string
-	readFromFile(getPathToTextList(), func(s string) { addressList = append(addressList, s) })
+	readFromFile(getPathToTextList(), func(address string) { addressList = append(addressList, address) })
 
 	wg := sync.WaitGroup{}
 	for _, address := range addressList {
