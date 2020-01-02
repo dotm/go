@@ -56,6 +56,7 @@ func readFromFile(path string, cb func(string)) {
 
 	scanner := bufio.NewScanner(file)
 	for scanner.Scan() {
+		//for each line in file, execute callback
 		cb(scanner.Text())
 	}
 
@@ -65,13 +66,13 @@ func readFromFile(path string, cb func(string)) {
 }
 
 func getPathToTextList() (path string) {
-	dir, _ := getPathToThisFile()
+	dir, _ := getDirPathToThisFile()
 	path = dir + "/address-list.txt"
 	return
 }
 
-func getPathToThisFile() (path string, err error) {
-	_, path, _, _ = runtime.Caller(1)
-	path = filepath.Dir(path)
+func getDirPathToThisFile() (dir string, err error) {
+	_, path, _, _ := runtime.Caller(1)
+	dir = filepath.Dir(path)
 	return
 }
