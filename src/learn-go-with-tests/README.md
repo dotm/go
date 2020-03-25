@@ -10,11 +10,11 @@ Go fundamentals
 - Arrays and slices - Learn about arrays, slices, len, varargs, range and test coverage.
 - Structs, methods & interfaces - Learn about struct, methods, interface and table driven tests.
 - Pointers & errors - Learn about pointers and errors.
-- Maps - Learn about storing values in the map data structure.
+- Maps - Learn about storing values in the map data structure. Also learn CRUD, create errors that are constants, and writing error wrappers.
 - Dependency Injection - Learn about dependency injection, how it relates to using interfaces and a primer on io.
 - Mocking - Take some existing untested code and use DI with mocking to test it.
-- Concurrency - Learn how to write concurrent code to make your software faster.
-- Select - Learn how to synchronise asynchronous processes elegantly.
+- Concurrency - Learn how to write concurrent code to make your software faster. Learn to avoid race condition using race detector.
+- Select - Learn how to synchronise asynchronous processes elegantly. Also learn about net/http/httptest
 - Reflection - Learn about reflection
 - Sync - Learn some functionality from the sync package including WaitGroup and Mutex
 - Context - Use the context package to manage and cancel long-running processes
