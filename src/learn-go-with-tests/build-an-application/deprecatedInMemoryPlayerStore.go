@@ -1,3 +1,4 @@
+//this package is no longer used
 package main
 
 // NewInMemoryPlayerStore initialises an empty player store
