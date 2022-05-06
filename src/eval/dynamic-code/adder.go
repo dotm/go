@@ -28,10 +28,11 @@ func main() {
 		return
 	}
 	numbers := *jsonReq.Numbers
+
 	sum := 0
 	for _, v := range numbers {
 		sum += v
 	}
 
-	fmt.Printf(`{"type": "int", "value": %v}`, sum)
+	fmt.Printf(`{"type": "%T", "value": %v}`, sum, sum)
 }
