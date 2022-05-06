@@ -1,5 +1,11 @@
 .DS_Store
 
+# Exclude private repo
+src/github.com/dhanapala-id/
+
+# Exclude things from github
+src/github.com
+
 # Exclude large files
 bin
 pkg
